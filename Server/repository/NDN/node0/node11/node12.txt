@@ -1,0 +1,1 @@
+Analytic foundations offer a better understanding of the capabilities and limitations of your work (as opposed to, say, simulation only). Cyber-physical systems need new theory that describes computation, predicts performance, quantifies capacity, accommodates time and space constraints, and generally allows informed design of a new generation of computing systems.

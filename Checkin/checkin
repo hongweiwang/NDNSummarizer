@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then 
+	echo "usage: ./checkin <folder> <file name>"	
+	exit 2
+
+elif [ ! -f "$1/$2" ]; then
+	echo "file does not exit"
+	exit 2
+
+else
+	java -classpath bin:lib/bcprov-jdk16-143.jar:lib/project-ndnx-javalib-0.7.2-SNAPSHOT.jar CheckinClient ndn:/summary/checkin/ $1 $2 
+fi

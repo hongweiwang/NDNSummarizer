@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then 
+	echo "usage: ./checkout <file name> <max number of words>"	
+	exit 2
+fi
+
+if [[ $2 = *[^0-9]* ]]; then
+    echo "please enter a positive integer"
+    exit 2
+fi
+
+java -classpath bin:lib/bcprov-jdk16-143.jar:lib/project-ndnx-javalib-0.7.2-SNAPSHOT.jar CheckoutClient ndn:/summary/checkout/ $1 $2 
+
+
