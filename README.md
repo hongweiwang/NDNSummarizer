@@ -11,23 +11,23 @@ NDNSummarizer is an auto-summarization service on top of NDN that works in conju
 
 The author needs to tag his document before doing the checkin to the server. We provide a sample document called "NDN" in "Checkin/local/". Here is an excerpt of the document:
 
-`<L1>`What is Good Research?`</L1>`
+> `<L1>`What is Good Research?`</L1>`
 
-`<L2>`There has to be a long-term need for it in the broader society.`</L2><L3>`Cyber-physical computing fulfills a perpetual over-arching need to achieve progress towards the betterment of human kind. Data (about the physical world) is a prerequisite to all major scientific advances.`</L3>`
+> `<L2>`There has to be a long-term need for it in the broader society.`</L2><L3>`Cyber-physical computing fulfills a perpetual over-arching need to achieve progress towards the betterment of human kind. Data (about the physical world) is a prerequisite to all major scientific advances.`</L3>`
 
-`<L2>`It should be outward looking.</L2><L3>Much research in computer science is understood only by computer scientists.`</L3>`
+> `<L2>`It should be outward looking.</L2><L3>Much research in computer science is understood only by computer scientists.`</L3>`
 
 We use the XML-like tag "`<L*></L*>`" (* is a number) to represent the "important levels" of the text segment. It forms a tree structure, where L1 indicates the most imporant segment. If a text segment has a larger tag number, it means it is less imporant. If it does not have a tag, then it will be assigned with the least imporant level. Here is the tagging tree structure of the above document.
 
-`<L1>`
+> `<L1>`
 
-`----<L2>`
+> `--------<L2>`
 
-`--------<L3>`
+> `-----------------<L3>`
 
-`----<L2>`
+> `--------<L2>`
 
-`--------<L3>`
+> `-----------------<L3>`
 
 
 Compile the Code
