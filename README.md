@@ -54,7 +54,9 @@ On each machine using NDNx, we need to start the NDNx server. Go to ndnx-0.3/bin
 ```
 
 If you would like to run it on separate machines, you also need to configure the IP address with:
+```
 ./ndndc add ndn:/summary/ [other machine IP]
+```
 
 To stop the server:
 ```
