@@ -73,7 +73,7 @@ cd Server/
 
 As an example, we will checkin a file named "NDN" in the directory "local" to the server repository.
 ```
-cd checkin/
+cd Checkin/
 ./checkin local NDN
 ```
 
@@ -86,7 +86,7 @@ At this point, a directory named "NDN" is generated in the server's repository.
 
 Specify the file name and the maximum number of words you would like to see in the summary. For example, if we want to checkout the "NDN" file with no more than 100 words, we can do the following:
 ```
-cd checkout/
+cd Checkout/
 ./checkout NDN 100
 ```
 
