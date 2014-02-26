@@ -36,7 +36,9 @@ Compile the Code
 The program contains three directories, "Checkin", "Checkout" and "Server". They contain the source code of checkin client, checkout client and server respectively. The server accept requests from checkin client and store the tagged document in its local repository. It also handles requests from checkout client and transmits the summarization. The three directories can be deployed on three different machines.
 
 To compile the code, go to each directory and type:
+```
 make
+```
 
 
 Run the Code
@@ -47,27 +49,33 @@ Run the Code
 Download ndnx-0.3 from the website http://named-data.net/download/.
 
 On each machine using NDNx, we need to start the NDNx server. Go to ndnx-0.3/bin, type:
+```
 ./ndndstart
+```
 
 If you would like to run it on separate machines, you also need to configure the IP address with:
 ./ndndc add ndn:/summary/ [other machine IP]
 
 To stop the server:
+```
 ./ndndstop
+```
 
 #### Start Server
-
+```
 cd Server/
 ./startserver
+```
 
 #### Checkin Files
 
 As an example, we will checkin a file named "NDN" in the directory "local" to the server repository.
-
+```
 cd checkin/
 ./checkin local NDN
+```
 
-Expected result:
+Expected result:<br/>
 Checkin successfully!
 
 At this point, a directory named "NDN" is generated in the server's repository.
@@ -75,11 +83,12 @@ At this point, a directory named "NDN" is generated in the server's repository.
 #### Checkout Files
 
 Specify the file name and the maximum number of words you would like to see in the summary. For example, if we want to checkout the "NDN" file with no more than 100 words, we can do the following:
-
+```
 cd checkout/
 ./checkout NDN 100
+```
 
-Expected result:
+Expected result:<br/>
 Checkout successfully!
 
 At this point, a new file named "NDN_100" is generated in the local directory.
