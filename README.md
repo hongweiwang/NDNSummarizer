@@ -33,9 +33,9 @@ We use the XML-like tag "`<L*></L*>`" (* is a number) to represent the "importan
 Compile the Code
 ----------------
 
-The program contains three directories, "Checkin", "Checkout" and "Server". They contain the source code of checkin client, checkout client and server respectively. The server accept requests from checkin client and store the tagged document in its local repository. It also handles requests from checkout client and transmits the summarization. The three directories can be deployed on three different machines.
+The program contains three directories, "Checkin", "Checkout" and "Server". They contain the source code of checkin client, checkout client and server respectively. The server accepts requests from checkin client and stores the tagged document in its local repository. It also handles requests from checkout client and transmits the summarization. The three directories can be deployed on three different machines.
 
-To compile the code, go to each directory and type:
+To compile the code, go to each directory and run:
 ```
 make
 ```
@@ -48,22 +48,22 @@ Run the Code
 
 Download ndnx-0.3 from the website http://named-data.net/download/.
 
-On each machine using NDNx, we need to start the NDNx server. Go to ndnx-0.3/bin, type:
+On each machine using NDNx, we need to start the NDNx server. Go to ndnx-0.3/bin, run:
 ```
 ./ndndstart
 ```
 
-If you would like to run it on separate machines, you also need to configure the IP address with:
+If you would like to run it on separate machines, you also need to configure the IP address:
 ```
 ./ndndc add ndn:/summary/ [other machine IP]
 ```
 
-To stop the server:
+To stop the NDNx server:
 ```
 ./ndndstop
 ```
 
-#### Start Server
+#### Start NDNSummarizer Server
 ```
 cd Server/
 ./startserver
